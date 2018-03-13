@@ -1,0 +1,52 @@
+.item {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 180rpx;
+  margin-top: 8rpx;
+  border-bottom: 1px solid ghostwhite;
+}
+
+.simg {
+  width: 120rpx;
+  height: 120rpx;
+  margin: 30rpx 12rpx;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 28rpx;
+  margin-top: 30rpx;
+  margin-left: 8rpx;
+}
+
+.pands {
+  display: flex;
+  flex-direction: row;
+  margin-top: auto;
+  margin-bottom: 28rpx;
+  font-size: 26rpx;
+}
+
+.price, .sales {
+  display: flex;
+  flex-direction: row;
+  color: gray;
+}
+
+.price-num {
+  color: #ff4b66;
+}
+
+.price {
+  margin-left: 8rpx;
+}
+
+.sales {
+  margin-left: auto;
+  margin-right: 8rpx;
+}

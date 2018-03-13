@@ -1,0 +1,35 @@
+<view>
+  <!--头部区域  -->
+  <view class='top'>
+    <image class='top-img' src='../../image/top.png'></image>
+    <image class='top-avatar' src='{{userInfo.avatarUrl}}'></image>
+    <view class='top-text'>{{userInfo.nickName}}</view>
+  </view>
+  <!--我的订单栏  -->
+  <view class='order-menu' catchtap='gotoorderlist' data-status='5'>
+    <image class='order-menu-img' src='../../image/order.png'></image>
+    <view class='order-menu-text'>我的订单</view>
+    <view class='order-menu-all'>全部订单</view>
+    <image src='../../image/yjt.png' class='order-menu-icon'></image>
+  </view>
+  <!--我的订单图标  -->
+  <view class='order'>
+    <view class='item' catchtap='gotoorderlist' data-status='0'>
+      <image class='order-icon' src='../../image/orderpay.png'></image>
+      <view class='order-text'>待支付</view>
+    </view>
+    <view class='item' catchtap='gotoorderlist' data-status='1'>
+      <image class='order-icon' src='../../image/ordersend.png'></image>
+      <view class='order-text'>待发货</view>
+    </view>
+    <view class='item' catchtap='gotoorderlist' data-status='2'>
+      <image class='order-icon' src='../../image/orderover.png'></image>
+      <view class='order-text'>待收货</view>
+    </view>
+  </view>
+  <!--联系方式  -->
+  <view class='aboutus'>
+    <view>交易相关问题请联系客服</view>
+    <button open-type="contact" size='mini' class='con-btn'>联系客服</button>
+  </view>
+</view>

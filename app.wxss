@@ -1,0 +1,8 @@
+page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  /* 全局背景色 */
+  background-color: #f2f4f6;
+}

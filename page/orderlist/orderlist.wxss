@@ -1,0 +1,173 @@
+/*头部  */
+
+.top {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 60rpx;
+  background-color: white;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border-bottom: 1px solid gainsboro;
+}
+
+.waitpay, .waitsend, .waitrec, .top-all {
+  width: 25%;
+}
+
+.active {
+  color: #ff4b66;
+  border-bottom: 1px solid #ff4b66;
+}
+
+/*订单列表  */
+
+.empty {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.empty-icon {
+  width: 100rpx;
+  height: 100rpx;
+  margin-top: 200rpx;
+}
+
+.empty-text {
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  color: gray;
+}
+
+.empty-go {
+  width: 200rpx;
+  height: 80rpx;
+  font-size: 32rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #ff4b66;
+  border-radius: 40rpx;
+  background-color: white;
+  margin-top: 30rpx;
+  border: 1px solid #ff4b66;
+}
+
+/*有数据 遍历  */
+
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
+  margin-bottom: 12rpx;
+}
+
+.item-top {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 50rpx;
+  border-bottom: 1px solid gainsboro;
+  font-size: 28rpx;
+  line-height: 50rpx;
+  color: gray;
+}
+
+.item-status {
+  margin-left: 20rpx;
+}
+
+.item-status-no {
+  font-size: 24rpx;
+  margin-left: 12rpx;
+}
+
+.item-status-text {
+  margin-left: auto;
+  margin-right: 20rpx;
+  color: #ff4b66;
+}
+
+.item-main {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.simg {
+  width: 150rpx;
+  height: 120rpx;
+  margin: 15rpx 20rpx;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.title {
+  display: flex;
+  font-size: 28rpx;
+  margin: 20rpx 12rpx;
+  color: gray;
+}
+
+.pandt {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 12rpx;
+}
+
+.price {
+  display: flex;
+  font-size: 30rpx;
+  color: gray;
+  margin-left: 12rpx;
+}
+
+.price-num {
+  color: #ff4b66;
+}
+
+.time {
+  display: flex;
+  font-size: 20rpx;
+  color: gray;
+  margin: auto 20rpx 0 auto;
+}
+
+/*订单状态颜色  */
+
+.waitpay-text-col {
+  color: red;
+}
+
+.waitsend-text-col {
+  color: lightsalmon;
+}
+
+.waitrec-text-col {
+  color: lightskyblue;
+}
+
+.ordercal-text-col {
+  color: lightgray;
+}
+
+.orderover-text-col {
+  color: black;
+}
+
+/*滚动窗口  */
+
+.scoll-view {
+  height: 100vh;
+}

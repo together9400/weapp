@@ -1,0 +1,17 @@
+<template name="product">
+  <!--需要传递数据...item(展开)  -->
+  <view class='item'>
+    <image class='simg' src='{{simg}}'></image>
+    <view class='title'>{{title}}</view>
+    <view class='pands'>
+      <view class='price'>
+        <view class='price-text'>价格:</view>
+        <view class='price-num'>{{price}}</view>
+      </view>
+      <view class='sales'>
+        <view class='sales-text'>销量</view>
+        <view class='sales-num'>{{sales}}</view>
+      </view>
+    </view>
+  </view>
+</template>

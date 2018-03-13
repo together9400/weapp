@@ -1,0 +1,42 @@
+<view class='container'>
+  <view class='nocart' wx:if="{{cart==''}}">
+    <view>购物车空空如也,快去挑选好货吧</view>
+    <view class='nocart-btn' catchtap='gotocategory'>逛逛店铺</view>
+  </view>
+  <!--购物车有数据  -->
+  <view class='cart' wx:else>
+    <block wx:for="{{cart}}" wx:key="id">
+      <view class='item'>
+        <view class='left' catchtap='itemstatus' data-id='{{item.id}}'>
+          <image class='slectedicon' src='{{item.selected?"../../image/selected.png":"../../image/uselected.png"}}'></image>
+        </view>
+        <image src='{{item.simg}}' catchtap='gotodetail' data-id='{{item.id}}' class='simg'></image>
+        <!--右侧分上中下  -->
+        <view class='right'>
+          <view class='title' catchtap='gotodetail' data-id='{{item.id}}'>{{item.title}}</view>
+          <!--删除一条  -->
+          <image src='../../image/del.png' catchtap='delitem' data-id='{{item.id}}' class='del'></image>
+          <view class='last'>
+            <!--加减号  -->
+            <view class='aands'>
+              <view class='sub' catchtap='sub' data-id='{{item.id}}'>-</view>
+              <view class='selectedcount'>{{item.cartcount}}</view>
+              <view class='add' catchtap='add' data-id='{{item.id}}'>+</view>
+            </view>
+            <view class='price'>¥:{{item.price}}</view>
+            <view class='count'>x{{item.cartcount}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <!--底栏  -->
+    <view class='foot'>
+      <view class='all' catchtap='allstatus'>
+        <image class='allicon' src='{{allselected?"../../image/selected.png":"../../image/uselected.png"}}'></image>
+        <view class='alltext'>全选</view>
+      </view>
+      <view class='totalprice'>总计: ¥ {{totalprice}}</view>
+      <view class='pay-btn' catchtap='gotopay'>结算</view>
+    </view>
+  </view>
+</view>

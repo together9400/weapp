@@ -1,0 +1,112 @@
+/*头部区域  */
+
+.top {
+  width: 100%;
+  height: 180rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-img {
+  width: 100%;
+  height: 180rpx;
+  z-index: -1;
+  position: absolute;
+}
+
+.top-avatar {
+  position: absolute;
+  width: 80rpx;
+  height: 80rpx;
+  border: 1px solid white;
+  border-radius: 80rpx;
+  z-index: 100;
+  top: 30rpx;
+  align-items: center;
+  margin-left: 45%;
+}
+
+.top-text {
+  position: absolute;
+  z-index: 100;
+  font-size: 28rpx;
+  top: 130rpx;
+  margin-left: 40%;
+}
+
+/*我的订单通栏  */
+
+.order-menu {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 50rpx;
+  margin-top: 20rpx;
+  background-color: white;
+  border-bottom: 1px solid gainsboro;
+}
+
+.order-menu-img {
+  width: 30rpx;
+  height: 30rpx;
+  margin: 10rpx 8rpx;
+}
+
+.order-menu-text {
+  font-size: 28rpx;
+  line-height: 50rpx;
+  margin-left: 4rpx;
+}
+
+.order-menu-all {
+  font-size: 28rpx;
+  line-height: 50rpx;
+  margin-left: auto;
+  margin-right: 20rpx;
+}
+
+.order-menu-icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin: 10rpx 12rpx 10rpx 0;
+}
+
+/*我的订单图标文字区域  */
+
+.order {
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  justify-content: space-around;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 180rpx;
+  height: 150rpx;
+}
+
+.order-icon {
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 20rpx;
+  margin-left: 60rpx;
+}
+
+.order-text {
+  font-size: 28rpx;
+  text-align: center;
+  margin-top: 8rpx;
+}
+
+/*广告或者联系信息  */
+
+.aboutus {
+  font-size: 28rpx;
+  color: lightgray;
+  margin-top: 50rpx;
+  text-align: center;
+}

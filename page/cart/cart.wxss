@@ -1,0 +1,185 @@
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #f2f4f6;
+}
+
+/*m没有数据  */
+
+.nocart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 32rpx;
+  color: gray;
+  margin-top: 180rpx;
+}
+
+.nocart-btn {
+  width: 220rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  border: 1px solid #fac7d0;
+  background-color: white;
+  color: #fac7d0;
+  font-size: 32rpx;
+  margin-top: 18rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+
+/*有数据  */
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 100rpx;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 200rpx;
+  border-bottom: 1px solid ghostwhite;
+  background-color: white;
+}
+
+.left {
+  width: 60rpx;
+  height: 100%;
+}
+
+.slectedicon {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 80rpx 10rpx;
+}
+
+.simg {
+  width: 200rpx;
+  height: 150rpx;
+  margin: 25rpx 10rpx;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  font-size: 28rpx;
+  margin-top: 12rpx;
+  margin-left: 12rpx;
+}
+
+.del {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 8rpx 12rpx 8rpx auto;
+}
+
+.last {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 80rpx;
+  font-size: 28rpx;
+}
+
+.price {
+  color: #ff4b66;
+  line-height: 80rpx;
+  margin-left: auto;
+  margin-right: 20rpx;
+}
+
+.count {
+  color: gray;
+  line-height: 80rpx;
+  margin-right: 20rpx;
+}
+
+.aands {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  line-height: 50rpx;
+  text-align: center;
+}
+
+.sub {
+  width: 50rpx;
+  height: 50rpx;
+  background-color: #f2f4f6;
+  font-size: 50rpx;
+  border: 1px solid ghostwhite;
+}
+
+.selectedcount {
+  width: 100rpx;
+  height: 50rpx;
+  border: 1px solid ghostwhite;
+  background-color: #f2f4f6;
+  font-size: 30rpx;
+  margin-left: 12rpx;
+}
+
+.add {
+  width: 50rpx;
+  height: 50rpx;
+  border: 1px solid ghostwhite;
+  background-color: #f2f4f6;
+  font-size: 30rpx;
+  margin-left: 12rpx;
+}
+
+/* //底部全选 */
+
+.foot {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+}
+
+.all {
+  display: flex;
+  flex-direction: row;
+}
+
+.allicon {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 30rpx 20rpx;
+}
+
+.alltext {
+  line-height: 100rpx;
+  font-size: 30rpx;
+}
+
+.totalprice {
+  line-height: 100rpx;
+  font-size: 32rpx;
+  color: #ff4b66;
+  margin-right: 20rpx;
+  margin-left: auto;
+}
+
+.pay-btn {
+  width: 200rpx;
+  height: 100%;
+  line-height: 100rpx;
+  color: white;
+  background-color: #ff4965;
+  text-align: center;
+}

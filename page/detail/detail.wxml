@@ -1,0 +1,55 @@
+<view class='container'>
+  <!--顶部主图轮播  -->
+  <view class='top'>
+    <swiper class='top-swiper' autoplay='true' interval='2500'>
+      <swiper-item>
+        <image class='top-img' src='{{img1}}'></image>
+      </swiper-item>
+      <swiper-item>
+        <image class='top-img' src='{{img2}}'></image>
+      </swiper-item>
+      <swiper-item>
+        <image class='top-img' src='{{img3}}'></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!--标题 价格 库存 销量区域  -->
+  <view>
+    <view class='title'>{{title}}</view>
+    <view class='price'>¥ {{price}}</view>
+    <view class='sands'>
+      <view class='stock'>
+        <view class='stock-text'>库存:</view>
+        <view class='stock'>{{stock}}</view>
+      </view>
+      <view class='sales'>
+        <view class='sales-text'>销量:</view>
+        <view class='sales-num'>{{sales}}</view>
+      </view>
+    </view>
+  </view>
+  <!--产品详情通栏  -->
+  <view class='detail-menu'>
+    <view class='line'></view>
+    <image src='../../image/detailicon.png' class='detailicon'></image>
+    <view class='detail-text'>产品详情</view>
+    <view class='line'></view>
+  </view>
+  <!--产品详情图  -->
+  <view class='detail'>
+    <image src='{{detail}}' class='detail-img'></image>
+  </view>
+  <!--底部区域  -->
+  <view class='foot'>
+    <view class='cart' catchtap='gotocart'>
+      <image class='cart-img' src='../../image/cart.png'></image>
+      <view class='cart-text'>购物车</view>
+    </view>
+    <view class='pay' catchtap='gotopay' data-id='{{id}}'>立即购买</view>
+    <view class='addcart' catchtap='addcart' data-index='{{id}}'>加入购物车</view>
+    <!--购物车当前商品的数量  -->
+    <view wx:if="{{cartcount==0}}"></view>
+    <view class='icon' wx:elif="{{cartcount<=99}}">{{cartcount}}</view>
+    <view class='icon' wx:else>99+</view>
+  </view>
+</view>

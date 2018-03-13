@@ -1,0 +1,20 @@
+<!--分类展示的商品模板  -->
+<template name="citem">
+  <view class='item'>
+    <image class='simg' src='{{simg}}'></image>
+    <view class='right'>
+      <view class='title'>{{title}}</view>
+      <view class='pands'>
+        <view class='price'>
+          <view class='price-text'>价格:</view>
+          <view class='price-num'>{{price}}</view>
+        </view>
+        <view class='sales'>
+          <view class='sales-text'>销量:</view>
+          <view class='sales-num'>{{sales}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</template>

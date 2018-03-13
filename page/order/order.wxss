@@ -1,0 +1,275 @@
+.content {
+  margin-bottom: 200rpx;
+}
+
+/*订单状态  */
+
+.orderstatus {
+  display: flex;
+  flex-direction: row;
+  height: 150rpx;
+  background-color: white;
+  margin-bottom: 20rpx;
+}
+
+.status-icon {
+  margin-top: 25rpx;
+  margin-left: 150rpx;
+}
+
+.status-text {
+  line-height: 150rpx;
+  margin-left: 100rpx;
+  color: orange;
+}
+
+/*订单商品  */
+
+.item {
+  height: 180rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  margin-bottom: 8rpx;
+  border-bottom: gainsboro;
+}
+
+.item-simg {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 15rpx 12rpx;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  font-size: 28rpx;
+  margin: 12rpx 18rpx;
+}
+
+.pandc {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.price {
+  font-size: 32rpx;
+  margin-left: 14rpx;
+  margin-top: auto;
+  margin-bottom: 18rpx;
+}
+
+.count {
+  margin: auto 60rpx 18rpx auto;
+  font-size: 28rpx;
+  color: gray;
+}
+
+/*订单详情  */
+
+.orderinfo {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: white;
+  font-size: 20rpx;
+  color: gray;
+  margin-top: 20rpx;
+}
+
+.orderinfo-text {
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 20rpx;
+}
+
+/*地址区域  */
+
+.address {
+  display: flex;
+  height: 80rpx;
+  margin-top: 20rpx;
+  background-color: white;
+}
+
+.address-icon {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 15rpx 20rpx;
+}
+
+.address-right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  font-size: 24rpx;
+}
+
+.nandp {
+  display: flex;
+  height: 100%;
+  margin: 8rpx 20rpx;
+}
+
+.phone {
+  margin-left: auto;
+  margin-right: 100rpx;
+}
+
+.addressdetail {
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  color: gray;
+  margin-left: 20rpx;
+  margin-bottom: 4rpx;
+}
+
+/*总金额  */
+
+.totalprice {
+  display: flex;
+  flex-direction: row;
+  height: 50rpx;
+  background-color: white;
+  margin-top: 20rpx;
+  font-size: 26rpx;
+  color: gray;
+  line-height: 50rpx;
+}
+
+.tp-text {
+  margin-left: 20rpx;
+}
+
+.tp-price {
+  margin-left: auto;
+  margin-right: 30rpx;
+  color: #ff4b66;
+}
+
+/*底部  */
+
+.foot {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: white;
+  height: 100rpx;
+  bottom: 0;
+}
+
+.timer {
+  /*剩余时间  */
+  font-size: 28rpx;
+  color: #ff4b66;
+  line-height: 100rpx;
+  margin-left: 20rpx;
+}
+
+.foot-btn {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.cancelpay {
+  width: 140rpx;
+  height: 50rpx;
+  border: 1px solid gray;
+  color: gray;
+  border-radius: 40rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  text-align: center;
+  margin-left: auto;
+  margin-right: 20rpx;
+  margin-top: 25rpx;
+}
+
+.continuepay {
+  width: 150rpx;
+  height: 60rpx;
+  border-radius: 40rpx;
+  color: white;
+  background-color: #ff4b66;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  text-align: center;
+  margin-right: 30rpx;
+  margin-left: 12rpx;
+  margin-top: 20rpx;
+}
+
+.succespay {
+  width: 150rpx;
+  height: 60rpx;
+  border-radius: 40rpx;
+  color: white;
+  background-color: #ff4b66;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  text-align: center;
+  margin-right: 30rpx;
+  margin-left: auto;
+  margin-top: 20rpx;
+}
+
+.confirmrec {
+  width: 150rpx;
+  height: 60rpx;
+  border-radius: 40rpx;
+  color: white;
+  background-color: #ff4b66;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  text-align: center;
+  margin-right: 30rpx;
+  margin-left: auto;
+  margin-top: 20rpx;
+}
+
+/*快递信息区域  */
+
+.express {
+  display: flex;
+  flex-direction: row;
+  margin-top: 8rpx;
+  margin-bottom: 12rpx;
+  color: gray;
+  font-size: 24rpx;
+  background-color: white;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+
+.express-text {
+  margin-left: 30rpx;
+}
+
+.express-exp {
+  margin-left: 12rpx;
+}
+
+.expressno-text {
+  margin-left: 50rpx;
+}
+
+.expressno {
+  margin-left: 12rpx;
+  color: #ff4b66;
+  height: 50rpx;
+}
+
+.exprxsshint {
+  margin-left: auto;
+  margin-right: 20rpx;
+}

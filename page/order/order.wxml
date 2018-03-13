@@ -1,0 +1,78 @@
+<view>
+  <view class='content'>
+    <!--订单状态  -->
+    <view class='orderstatus'>
+      <icon class='status-icon' wx:if="{{order.status==0}}" type='waiting' size='40'></icon>
+      <icon class='status-icon' wx:elif="{{order.status==1}}" type='success' size='40'></icon>
+      <icon class='status-icon' wx:elif="{{order.status==2}}" type='waiting' size='40'></icon>
+      <icon class='status-icon' wx:elif="{{order.status==3}}" type='clear' size='40'></icon>
+      <icon class='status-icon' wx:elif="{{order.status==4}}" type='success_no_circle' size='40'></icon>
+      <view class='status-text' wx:if="{{order.status==0}}">等待支付</view>
+      <view class='status-text' wx:elif="{{order.status==1}}">支付成功,等待发货</view>
+      <view class='status-text' wx:elif="{{order.status==2}}">卖家已发货</view>
+      <view class='status-text' wx:elif="{{order.status==3}}">订单已取消</view>
+      <view class='status-text' wx:elif="{{order.status==4}}">订单已完结</view>
+    </view>
+    <!--如果是已发货或者完结状态的,显示快递信息  -->
+    <view class='express' wx:if="{{order.status==2||order.status==4}}">
+      <view class='express-text'>快递:</view>
+      <view class='express-exp'>{{order.express}}</view>
+      <view class='expressno-text'>快递单号:</view>
+      <text class='expressno' selectable='true'>{{order.expressno}}</text>
+      <view class='exprxsshint'>长按红色快递单号复制</view>
+    </view>
+    <!--订单详情  -->
+    <block wx:for="{{order.orderdetails}}" wx:key="id">
+      <view class='item'>
+        <image src='{{item.simg}}' class='item-simg'></image>
+        <view class='right'>
+          <view class='title'>{{item.title}}</view>
+          <view class='pandc'>
+            <view class='price'>¥: {{item.price}}</view>
+            <view class='count'>x {{item.count}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <!--总金额  -->
+    <view class='totalprice'>
+      <view class='tp-text'>订单总金额:</view>
+      <view class='tp-price'>{{order.totalprice}}</view>
+    </view>
+    <!--地址信息  -->
+    <view class='address'>
+      <image src='../../image/addressicon.png' class='address-icon'></image>
+      <view class='address-right'>
+        <view class='nandp'>
+          <view class='name'>{{order.username}}</view>
+          <view class='phone'>{{order.phone}}</view>
+        </view>
+        <view class='addressdetail'>{{address}}</view>
+      </view>
+    </view>
+    <!--订单信息  -->
+    <view class='orderinfo'>
+      <view class='orderinfo-text'>订单编号: {{order.orderid}}</view>
+      <view class='orderinfo-text'>创建时间: {{order.ctime}}</view>
+      <view class='orderinfo-text' wx:if="{{order.status==1}}">付款时间: {{order.utime}}</view>
+      <view class='orderinfo-text' wx:elif="{{order.status==2}}">发货时间: {{order.utime}}</view>
+      <view class='orderinfo-text' wx:elif="{{order.status==3}}">取消时间: {{order.utime}}</view>
+      <view class='orderinfo-text' wx:elif="{{order.status==4}}">完结时间: {{order.utime}}</view>
+    </view>
+  </view>
+  <!--底部区域  -->
+  <view class='foot'>
+    <view class='foot-btn'>
+      <block wx:if="{{order.status==0}}">
+        <view class='timer'>剩余支付时间:{{time}}分钟</view>
+        <view class='cancelpay' catchtap='cancelorder' data-orderid='{{order.orderid}}'>取消订单</view>
+        <view class='continuepay' catchtap='continuepay'>继续支付</view>
+      </block>
+      <block wx:elif="{{order.status==2}}">
+        <view class='confirmrec' catchtap='confirmrec' data-orderid='{{order.orderid}}'>确认收货</view>
+        <view class='continuepay' catchtap='gotoself'>知道了</view>
+      </block>
+      <view class='succespay' wx:else catchtap='gotoself'>确定</view>
+    </view>
+  </view>
+</view>

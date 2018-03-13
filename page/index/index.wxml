@@ -1,0 +1,28 @@
+<import src='../../tpl/product/product.wxml' />
+<view>
+  <!--顶部轮播图  -->
+  <view class='swiper-view'>
+    <swiper class='swiper' indicator-dots='true' autoplay='true' interval='1800'>
+      <block wx:for="{{banners}}" wx:key="{{banners.id}}">
+        <swiper-item>
+          <image class='swiper-img' src='{{item.banner}}'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!--中间卖家推荐栏 -->
+  <view class='recommend'>
+    <image class='recommend-img' src='../../image/tuijian.png'></image>
+    <view class='recommend-text'>卖家推荐</view>
+    <image class='recommend-icon' src='../../image/xjt.png'></image>
+  </view>
+  <!--下部商品展示区域  -->
+  <view class='container'>
+    <!--产品展示的模板  -->
+    <block wx:for="{{products}}" wx:key="{{products.id}}">
+      <view catchtap='gotodetail' data-index='{{item.id}}'>
+        <template is="product" data="{{...item}}" />
+      </view>
+    </block>
+  </view>
+</view>

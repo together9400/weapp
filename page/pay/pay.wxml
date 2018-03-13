@@ -1,0 +1,34 @@
+<view>
+  <!--用户选择的商品  -->
+  <block wx:for="{{products}}" wx:key="id">
+    <view class='item'>
+      <image src='{{item.simg}}' class='simg'></image>
+      <view class='right'>
+        <view class='title'>{{item.title}}</view>
+        <view class='pandc'>
+          <view class='price'>
+            <view class='price-text'>价格: </view>
+            <view class='price-num'>¥{{item.price}}</view>
+          </view>
+          <view class='count'>x{{item.cartcount}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <!--选择地址区域  -->
+  <view wx:if='{{address==""}}' catchtap='addaddress' class='selectaddress'>
+    <image src='../../image/add.png' class='addicon'></image>
+    <view class='addtext'>您还没有选择地址,赶紧添加吧~~</view>
+    <image src='../../image/yjt.png' class='addyjt'></image>
+  </view>
+  <view wx:else>
+    <view class='address'>
+      <view class='address-text'>收货地址:{{address.userName}}, {{address.telNumber}}, {{address.province}}{{address.cityName}}{{address.countyName}}{{address.detailInfo}}</view>
+    </view>
+  </view>
+  <!--底部总价格  -->
+  <view class='foot'>
+    <view class='totalprice'>总计:{{totalprice}}</view>
+    <view class='pay-btn' catchtap='gotopay'>支付</view>
+  </view>
+</view>

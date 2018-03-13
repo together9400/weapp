@@ -1,0 +1,163 @@
+.container {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
+/*头部主图轮播  */
+
+.top {
+  width: 100%;
+  height: 750rpx;
+}
+
+.top-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.top-img {
+  width: 100%;
+  height: 100%;
+}
+
+/*title区域  */
+
+.title {
+  font-size: 32rpx;
+  margin-left: 18rpx;
+  margin-top: 12rpx;
+}
+
+.price {
+  font-size: 50rpx;
+  color: #ff4b66;
+  margin: 8rpx 20rpx;
+}
+
+.sands, .sales, .stock {
+  display: flex;
+  flex-direction: row;
+  font-size: 22rpx;
+  color: gray;
+}
+
+.stock {
+  margin-left: 12rpx;
+}
+
+.sales {
+  margin-left: auto;
+  margin-right: 18rpx;
+}
+
+/*详情通栏  */
+
+.detail-menu {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 60rpx;
+  margin-top: 8rpx;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+
+.line {
+  width: 100rpx;
+  height: 1px;
+  background-color: #d3d3d3;
+}
+
+.detailicon {
+  margin: auto 12rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.detail-text {
+  color: #d3d3d3;
+  margin-right: 12rpx;
+  line-height: 60rpx;
+  font-size: 32rpx;
+}
+
+/*详情图  */
+
+.detail {
+  width: 100%;
+  height: 100%;
+  margin-top: 8rpx;
+  margin-bottom: 100rpx;
+}
+
+.detail-img {
+  width: 100%;
+  height: 100%;
+}
+
+/*底部区域  */
+
+.foot {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  background-color: white;
+  border-top: 1px solid gray;
+}
+
+.cart {
+  width: 120rpx;
+  height: 100rpx;
+  float: left;
+}
+
+.cart-img {
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 20rpx;
+  margin-left: 40rpx;
+}
+
+.cart-text {
+  font-size: 18rpx;
+  text-align: center;
+  color: gray;
+}
+
+.addcart, .pay {
+  float: right;
+  color: white;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 36rpx;
+}
+
+.addcart {
+  background-color: #f5a623;
+  width: 42%;
+  height: 100%;
+}
+
+.pay {
+  width: 42%;
+  overflow: hidden;
+  height: 100%;
+  background-color: #ff7101;
+}
+
+.icon {
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 40rpx;
+  color: white;
+  background-color: red;
+  font-size: 22rpx;
+  top: 4rpx;
+  left: 60rpx;
+  line-height: 40rpx;
+  text-align: center;
+}

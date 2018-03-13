@@ -1,0 +1,17 @@
+<import src='../../tpl/citem/citem.wxml' />
+<view class='container'>
+  <!--侧边分类导航  -->
+  <view class='nav'>
+    <block wx:for="{{category}}" wx:key="{{category.name}}">
+      <view class='category {{item.class}}' catchtap='clickcategory' data-index='{{index}}'>{{item.name}}</view>
+    </block>
+  </view>
+  <!--右侧商品展示 传递数据ctiems(每个商品)-->
+  <view class='main'>
+    <block wx:for="{{citems}}" wx:key="{{citems.id}}">
+      <view catchtap='gotodetail' data-index='{{item.id}}'>
+        <template is="citem" data='{{...item}}'></template>
+      </view>
+    </block>
+  </view>
+</view>

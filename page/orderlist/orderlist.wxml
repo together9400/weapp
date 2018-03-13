@@ -1,0 +1,52 @@
+<view>
+  <!-- 顶部切换 -->
+  <view class='top'>
+    <view catchtap='gotoorderlist' data-status='0' class="waitpay {{id==0?'active':''}}">待支付</view>
+    <view catchtap='gotoorderlist' data-status='1' class="waitsend {{id==1?'active':''}}">待发货</view>
+    <view catchtap='gotoorderlist' data-status='2' class="waitrec {{id==2?'active':''}}">待收货</view>
+    <view catchtap='gotoorderlist' data-status='5' class="top-all {{id==5?'active':''}}">全部</view>
+  </view>
+  <!--订单列表  -->
+  <!--没有数据  -->
+  <view wx:if="{{order==''}}" class='empty'>
+    <image src='../../image/empty.png' class='empty-icon'></image>
+    <view class='empty-text'>
+      <block wx:if="{{id==0}}">没有待支付订单</block>
+      <block wx:elif="{{id==1}}">没有待发货订单</block>
+      <block wx:elif="{{id==2}}">没有待收货订单</block>
+      <block wx:elif="{{id==5}}">还没有下过订单</block>
+    </view>
+    <view catchtap='gotoindex' class='empty-go'>逛逛店铺</view>
+  </view>
+  <!--有数据  -->
+  <scroll-view class='scoll-view' bindscrolltolower="lower" scroll-y="true" enable-back-to-top="true">
+    <block wx:for="{{order}}" wx:key="id">
+      <view class='item' catchtap='gotoorderdetail' data-orderid='{{item.orderid}}'>
+        <view class='item-top'>
+          <view class='item-status'>订单编号: </view>
+          <view class='item-status-no'>{{item.orderid}}</view>
+          <view class='item-status-text'>
+            <view class='waitpay-text-col' wx:if="{{item.status==0}}">等待支付</view>
+            <view class='waitsend-text-col' wx:elif="{{item.status==1}}">等待发货</view>
+            <view class='waitrec-text-col' wx:elif="{{item.status==2}}">等待收货</view>
+            <view class='ordercal-text-col' wx:elif="{{item.status==3}}">订单已取消</view>
+            <view class='orderover-text-col' wx:elif="{{item.status==4}}">订单已完结</view>
+          </view>
+        </view>
+        <view class='item-main'>
+          <image src='{{item.orderdetails[0].simg}}' class='simg'></image>
+          <view class='right'>
+            <view class='title'>{{item.orderdetails[0].title}}</view>
+            <view class='pandt'>
+              <view class='price'>
+                <view class='price-text'>总价: </view>
+                <view class='price-num'> ¥ {{item.totalprice}}</view>
+              </view>
+              <view class='time'>{{item.utime}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

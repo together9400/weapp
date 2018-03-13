@@ -1,0 +1,38 @@
+/*侧边分类导航  */
+@import '../../tpl/citem/citem.wxss';
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.nav {
+  width: 140rpx;
+  height: 100%;
+  position: fixed;
+}
+
+.category {
+  width: 100%;
+  height: 100rpx;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.active {
+  background-color: white;
+  color: orange;
+}
+
+/*商品展示区域  */
+
+.main {
+  left: 140rpx;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: fixed;
+}
